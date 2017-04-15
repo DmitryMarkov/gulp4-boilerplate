@@ -1,4 +1,4 @@
-# Учебная сборка Loftschool
+# Gulp boilerplate
 
 > Сборка работает на gulp версии 4.0. 
 

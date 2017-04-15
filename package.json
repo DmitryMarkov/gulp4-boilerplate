@@ -1,7 +1,7 @@
 {
-  "name": "loftschool-builder",
+  "name": "gulp4-boilerplate",
   "version": "1.0.0",
-  "author": "a.kalin",
+  "author": "Dmitry Markov",
   "license": "ISC",
   "scripts": {},
   "devDependencies": {
