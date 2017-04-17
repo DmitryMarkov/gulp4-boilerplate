@@ -1,8 +1,8 @@
 /* global $ */
 'use strict'
 
-module.exports = function () {
-  $.gulp.task('serve', function () {
+module.exports = () => {
+  $.gulp.task('serve', () => {
     $.browserSync.init({
       open: false,
       server: $.config.root
