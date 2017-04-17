@@ -1,5 +1,5 @@
 /* global $ */
-'use strict';
+'use strict'
 
 module.exports = function() {
   $.gulp.task('pug', function() {
@@ -11,6 +11,6 @@ module.exports = function() {
           message:  error.message
         }
        }))
-      .pipe($.gulp.dest($.config.root));
-  });
-};
+      .pipe($.gulp.dest($.config.root))
+  })
+}
