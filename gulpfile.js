@@ -1,4 +1,5 @@
-'use strict';
+/* global $ */
+'use strict'
 
 global.$ = {
   package: require('./package.json'),
@@ -13,11 +14,11 @@ global.$ = {
   del: require('del'),
   browserSync: require('browser-sync').create(),
   gp: require('gulp-load-plugins')()
-};
+}
 
-$.path.task.forEach(function(taskPath) {
-  require(taskPath)();
-});
+$.path.task.forEach((taskPath) => {
+  require(taskPath)()
+})
 
 $.gulp.task('default', $.gulp.series(
   'clean',
@@ -25,7 +26,9 @@ $.gulp.task('default', $.gulp.series(
     'sass',
     'pug',
     'js:foundation',
+    'js:lint',
     'js:process',
+    'copy:fonts',
     'copy:image',
     'css:foundation',
     'sprite:svg'
@@ -34,4 +37,4 @@ $.gulp.task('default', $.gulp.series(
     'watch',
     'serve'
   )
-));
+))

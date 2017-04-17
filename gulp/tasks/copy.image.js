@@ -1,8 +1,9 @@
-'use strict';
+/* global $ */
+'use strict'
 
-module.exports = function() {
-  $.gulp.task('copy:image', function() {
+module.exports = () => {
+  $.gulp.task('copy:image', () => {
     return $.gulp.src('./source/images/**/*.*', { since: $.gulp.lastRun('copy:image') })
-      .pipe($.gulp.dest($.config.root + '/assets/img'));
-  });
-};
+      .pipe($.gulp.dest($.config.root + '/assets/img'))
+  })
+}
