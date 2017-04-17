@@ -1,8 +1,8 @@
 /* global $ */
-'use strict';
+'use strict'
 
-module.exports = function() {
-  $.gulp.task('sprite:svg', function() {
+module.exports = () => {
+  $.gulp.task('sprite:svg', () => {
     return $.gulp.src('./source/sprite/*.svg')
       .pipe($.gp.svgmin({
         js2svg: {
@@ -11,9 +11,9 @@ module.exports = function() {
       }))
       .pipe($.gp.cheerio({
         run: function ($) {
-          $('[fill]').removeAttr('fill');
-          $('[stroke]').removeAttr('stroke');
-          $('[style]').removeAttr('style');
+          $('[fill]').removeAttr('fill')
+          $('[stroke]').removeAttr('stroke')
+          $('[style]').removeAttr('style')
         },
         parserOptions: { xmlMode: true }
       }))
@@ -21,10 +21,10 @@ module.exports = function() {
       .pipe($.gp.svgSprite({
         mode: {
           symbol: {
-            sprite: "../sprite.svg"
+            sprite: '../sprite.svg'
           }
         }
       }))
       .pipe($.gulp.dest($.config.root + '/assets/img'))
   })
-};
+}

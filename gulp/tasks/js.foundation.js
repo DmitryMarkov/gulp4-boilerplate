@@ -1,10 +1,10 @@
 /* global $ */
-'use strict';
+'use strict'
 
-module.exports = function() {
-  $.gulp.task('js:foundation', function() {
+module.exports = () => {
+  $.gulp.task('js:foundation', () => {
     return $.gulp.src($.path.jsFoundation)
       .pipe($.gp.concat('foundation.js'))
       .pipe($.gulp.dest($.config.root + '/assets/js'))
   })
-};
+}
